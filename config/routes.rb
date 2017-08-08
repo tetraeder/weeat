@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   root 'main#index', as: 'main_index'
 
   resources :genres
