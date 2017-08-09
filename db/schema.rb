@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808120351) do
+ActiveRecord::Schema.define(version: 20170809040756) do
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -27,19 +27,6 @@ ActiveRecord::Schema.define(version: 20170808120351) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "restauants", force: :cascade do |t|
-    t.integer "genre_id"
-    t.integer "comment_id"
-    t.integer "rating"
-    t.boolean "card"
-    t.text "address"
-    t.integer "max_delivery_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["comment_id"], name: "index_restauants_on_comment_id"
-    t.index ["genre_id"], name: "index_restauants_on_genre_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
